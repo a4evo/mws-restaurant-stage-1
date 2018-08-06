@@ -1,3 +1,4 @@
+const mapboxKey = 'pk.eyJ1IjoiYTRldm8iLCJhIjoiY2prNWp1ZmV3MHVuMDN3cGFocHhoNjBheSJ9.1GPdET5iVDxgTsjuDpk-oQ';
 let restaurants,
   neighborhoods,
   cuisines
@@ -78,7 +79,7 @@ initMap = () => {
         scrollWheelZoom: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-    mapboxToken: '<your MAPBOX API KEY HERE>',
+    mapboxToken: mapboxKey,
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
