@@ -5,19 +5,33 @@ let restaurants,
 var newMap
 var markers = []
 
-function registerServiceWorker() {
-	if(!navigator.serviceWorker) return;
-	navigator.serviceWorker.register('/js/sw.js')
-	.then(function(reg) {
-		console.log('SW registered');
-	})
-	.catch(function() {
-		console.log('SW reg fail');
-	});
+
+//run service worker
+function startServiceWorker() {
+
+	if ('serviceWorker' in navigator) {
+
+		if (navigator.serviceWorker.controller) {
+			if(navigator.serviceWorker.controller.state == 'active') {
+				console.log('SW already running');
+				return;
+			}
+		}
+
+		console.log('SW registration in progress.');
+		navigator.serviceWorker.register('/sw.js')
+		.then(function(reg) {
+	//
+			console.log('SW registered');
+		})
+		.catch(function() {
+			console.log('SW reg fail');
+		});
+	} else {
+		console.log('SW is not supported');
+	}
 }
-
-registerServiceWorker();
-
+startServiceWorker();
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -223,4 +237,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
-
