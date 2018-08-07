@@ -134,7 +134,7 @@ nav h1 a {
 }
 
 #map-container {
-	height: 400px;
+	min-height: 400px;
 	width: 100%;
 }
 
