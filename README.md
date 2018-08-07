@@ -63,7 +63,7 @@ Most of the code in this project has been written to the ES6 JavaScript specific
 
 * Is focus used appropriately to allow easy navigation of the site?
 
-[ ] Focus is appropriately managed allowing users to noticeably tab through each of the important elements of the page. Modal or interstitial windows appropriately lock focus.
+[x] Focus is appropriately managed allowing users to noticeably tab through each of the important elements of the page. Modal or interstitial windows appropriately lock focus.
 
 * Are site elements defined semantically?
 
@@ -73,4 +73,4 @@ Most of the code in this project has been written to the ES6 JavaScript specific
 
 * Are pages that have been visited available offline?
 
-[ ] When available in the browser, the site uses a service worker to cache responses to requests for site assets. Visited pages are rendered when there is no network access.
+[x] When available in the browser, the site uses a service worker to cache responses to requests for site assets. Visited pages are rendered when there is no network access.
