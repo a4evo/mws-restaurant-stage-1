@@ -1,0 +1,51 @@
+#restaurants-list,
+#reviews-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 5px;
+}
+
+#restaurants-list li,
+#reviews-list li {
+	width: 100%;
+}
+
+#maincontent {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.inside #map-container {
+	flex-grow:2;
+}
+
+@media screen and (min-width: 600px) {
+	#restaurants-list li,
+	#reviews-list li {
+		width: 47%;
+	}
+
+}
+
+@media screen and (min-width: 800px) {
+	.inside #map-container {
+		width: 40%;
+		align-self:stretch;
+	}
+	.inside #map {
+		height: 100%;
+	}
+
+	#restaurant-container {
+		width: 54%;
+		order: -1;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	#restaurants-list li,
+	#reviews-list li {
+		width: 32%;
+	}
+}
