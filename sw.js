@@ -43,7 +43,7 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event){
 	event.waitUntil(
-		caches.match(event.request)
+		caches.match(event.request, {ignoreSearch: true})
 		.then(function(response){
 			if(response) {
 				console.log('Cache found');
