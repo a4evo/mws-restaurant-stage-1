@@ -1,5 +1,13 @@
 # Mobile Web Specialist Certification Course
 ---
+
+## To start
+1. Download.
+2. Instal Python v.3.*.
+3. Run windows command line.
+4. `cd` to folder with project.
+5. run `python -m http.server 8000`.
+6. Open [link](http://0.0.0.0:8000/)
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
 ## Project Overview: Stage 1
